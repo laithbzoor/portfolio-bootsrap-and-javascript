@@ -1,0 +1,700 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Dancing+Script:wght@400;500;600;700&family=Dosis:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,700;1,800;1,900&family=Roboto+Serif:ital,opsz,wght@0,8..144,100;0,8..144,200;0,8..144,300;0,8..144,400;0,8..144,500;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,100;1,8..144,200;1,8..144,300;1,8..144,400;1,8..144,500;1,8..144,700;1,8..144,800;1,8..144,900&family=Roboto:wght@100;400&display=swap');
+
+:root {
+    --main-color: #ff724c;
+
+}
+
+body {
+overflow: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+
+}
+
+.bg-main-color {
+    background-color: var(--main-color);
+}
+
+.text-main-color {
+    color: var(--main-color);
+
+}
+
+.border-main-color {
+    border-color: var(--main-color) !important;
+}
+.go-to-top{
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.loading{
+    transition: 0.5s;
+}
+.loader {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    border: 3px solid;
+    border-color: var(--main-color) var(--main-color) transparent transparent;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: 3px solid;
+    border-color: transparent transparent #7f7c7c #7f7c7c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotationBack 0.5s linear infinite;
+    transform-origin: center center;
+  }
+  .loader::before {
+    width: 32px;
+    height: 32px;
+    border-color: var(--main-color) var(--main-color) transparent transparent;
+    animation: rotation 1.5s linear infinite;
+  }
+      
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes rotationBack {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+      
+/*navbar*/
+.navbar{
+    transition: 0.4s background-color;
+}
+nav {
+    font-family: 'roboto', sans-serif;
+    font-weight: 400;
+
+}
+
+.container {
+    max-width: 1140px;
+
+}
+
+.hire-me a {
+    background-color: var(--main-color);
+
+}
+
+.hire-me i {
+    padding: 5px;
+    transition: 0.9s;
+}
+
+.hire-me:hover i {
+    background-color: black !important;
+    transform: rotate(360deg);
+    color: white !important;
+
+}
+
+.navbar .nav-link {
+    position: relative;
+    padding-block: 10px;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    transition: 0.5s;
+    background-color: var(--main-color);
+
+}
+
+.navbar .nav-link.active::after {
+    width: 100%;
+
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+/*header*/
+header {
+    background-image: url(../img/introbg5.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -72px;
+    background-attachment: fixed;
+}
+
+.header .title span {
+    font-family: 'Raleway';
+    font-size: 23px;
+    font-weight: 500;
+
+}
+
+.header .title h1 {
+
+    font-family: 'Dosis';
+    font-size: 60px;
+    font-weight: 700;
+
+}
+.header .title p{
+    font-family: 'Raleway';
+    font-size: 23px;
+    font-weight: 500;
+}
+
+header .icons a i {
+    font-size: 14;
+    font-weight: 400;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+header .icons a i:hover {
+    transform: rotate(360deg);
+}
+
+header .facebook i {
+    color: #3b5999;
+    border: 1px solid #3b5999;
+}
+
+header .icons .facebook:hover i {
+    color: white;
+    border-color: #3b5999;
+    background-color: #3b5999;
+}
+
+header .dribble i {
+    color: #ea4c89;
+    border: 1px solid #ea4c89;
+}
+
+header .dribble:hover i {
+    color: white;
+    border-color: #ea4c89;
+    background-color: #ea4c89;
+}
+
+header .behance i {
+    color: #1769ff;
+    border: 1px solid #1769ff;
+}
+
+header .behance:hover i {
+    color: white;
+    border-color: #1769ff;
+    background-color: #1769ff;
+}
+
+header .linkedin i {
+    color: #0077b5;
+    border: 1px solid #0077b5;
+}
+
+header .linkedin:hover i {
+    color: white;
+    border-color: #0077b5;
+    background-color: #0077b5;
+}
+
+header .google i {
+    color: #dd4b39;
+    border: 1px solid #dd4b39;
+}
+
+header .google:hover i {
+    color: white;
+    border-color: #dd4b39;
+    background-color: #dd4b39;
+}
+header .title p{
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 1px solid #333;
+    animation: typing 3s infinite alternate-reverse steps(29) both, blink infinite 0.7s;
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 314px;
+    }
+}
+@keyframes blink{
+    from{
+    border-color:#333 ;
+}
+to{
+    border-color: #3333332d;
+}
+}
+
+/*end header*/
+/*start about*/
+.p-info {
+    background-color: #ff7a57;
+    font-family: 'dosis', sans-serif;
+}
+
+.title h2 {
+    font-size: 48px;
+    font-weight: 700;
+
+}
+
+.custom-button i {
+    background-color: #3b3b3b;
+    padding: 15px 20px;
+    font-size: 11px;
+}
+
+.custom-button span {
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.custom-button:hover i {
+    color: var(--main-color) !important;
+
+}
+
+.about .container>.row {
+    width: 85%;
+    margin: auto;
+}
+
+.numbers {
+    background-color: #4e4e4e;
+}
+
+.numbers .row span {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 39px;
+    font-family: 'roboto', sans-serif;
+}
+
+.numbers .row p {
+    font-family: 'dosis', sans-serif;
+    font-weight: 700;
+    line-height: 19.2px;
+}
+
+/*end about*/
+/*service*/
+.services .service-item {
+    position: relative;
+}
+
+.title span {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 18px;
+
+}
+
+.title h2 {
+    font-family: 'Dosis', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 57.6px;
+
+}
+
+
+.services .service-item::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 15px;
+    background-color: #f3f3f3;
+    z-index: -1;
+    height: 0;
+    transition: 0.9s;
+
+
+}
+
+.services .service-item:hover::after {
+    height: 100%;
+}
+
+.services .service-item h3 {
+    font-size: 20px;
+
+}
+
+.services .service-item p {
+    font-size: 14px;
+    color: rgb(129, 129, 129);
+}
+
+/*portfolio*/
+.portfolio .nav-item {
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.portfolio {
+    background-color: #f3f3f3;
+}
+
+.portfolio .nav-link {
+    font-size: 13px;
+    font-family: 'Raleway', sans-serif;
+    color: rgb(95, 95, 95);
+    border-color: rgb(95, 95, 95) !important;
+}
+
+.portfolio .nav-link.active {
+    background-color: var(--main-color);
+    border: none !important;
+    color: white;
+}
+
+.overlay {
+    background-color: rgb(0, 0, 0, 0.2);
+    transform: scaleY(0);
+    transition: 0.9s;
+}
+
+.project-card:hover .overlay {
+    transform: scaleY(1);
+
+}
+
+.overlay i {
+    transform: scale(0);
+    transition: 0.6s 0.1s;
+    cursor: pointer;
+
+}
+
+.project-card:hover .overlay i {
+    transform: scale(1) rotate(360deg);
+
+}
+
+.overlay i:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: var(--main-color);
+}
+
+.project-card .details {
+    bottom: 40px;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.project-card:hover .details {
+    bottom: 0;
+    opacity: 1;
+
+}
+
+.project-title h3 {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.project-title p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/*end portfolio*/
+/*start resume*/
+.resume .head i {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.resume .head {
+    position: relative;
+}
+.resume .head h3{
+    font-size: 20px;
+    font-weight: 500;
+}
+.descirption h4{
+    font-size: 14px ;
+    font-weight: 500;
+}
+.descirption span{
+    font-size: 14px;
+    font-weight: 400;
+    
+}
+.descirption p{
+    font-size: 15px;
+    font-weight: 400;
+
+}
+
+.resume .head::before,
+.resume .item:not(:last-of-type)::before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    background-color: #333;
+    top: 25px;
+    left: 18px;
+    z-index: -1;
+}
+
+.resume .item:not(.item.special)::after {
+    content: '';
+    position: absolute;
+    background-color: white;
+    width: 12px;
+    height: 12px;
+    top: 25px;
+    left: 12px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+}
+
+.resume .head:hover i {
+    background-color: #f3f3f3;
+    color: var(--main-color) !important;
+}
+
+.resume .item:hover::after {
+    background-color: var(--main-color);
+}
+
+.resume .item:not(.item.special):hover::after {
+    background-color: var(--main-color);
+}
+
+.bar {
+    height: 5px;
+    background-color: #333;
+    position: relative;
+    border-radius: 5px;
+
+}
+
+.bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: var(--main-color);
+    width: 80%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.item[percentage="80%"] h4 {
+    width: 80%;
+
+}
+
+.item[percentage="80%"] .bar::after {
+    width: 80%;
+}
+
+.item[percentage="70%"] h4 {
+    width: 70%;
+
+}
+
+.item[percentage="70%"] .bar::after {
+    width: 70%;
+}
+
+.item[percentage="55%"] h4 {
+    width: 55%;
+
+}
+
+.item[percentage="55%"] .bar::after {
+    width: 55%;
+}
+
+
+/*download resume*/
+.download-resume {
+    background: linear-gradient(rgba(59, 59, 59, 0.75), rgba(59, 59, 59, 0.75)), url(../img/brandbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.download-resume p {
+    font-family: 'dosis', sans-serif;
+    font-size: 32px;
+}
+
+.download-resume a {
+    font-size: 13px;
+    font-family: Raleway, sans-serif;
+    transition: 0.5s;
+}
+
+.download-resume a:hover {
+    background-color: var(--main-color);
+    border-color: var(--main-color) !important;
+}
+
+/*testmonials*/
+.testimonials h3{
+    color: #313131;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+.testimonials p{
+    color: #5b5b5b;
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.testimonials .qoute span {
+    color: #5b5b5b;
+    font-size: 14px;
+}
+
+.testimonials .qoute i {
+    font-size: 20px;
+}
+
+.testimonials .qoute:hover {
+    color: white;
+    background-color: #5b5b5b;
+}
+
+.testimonials .qoute:hover span {
+    color: white;
+}
+
+.carousel-indicators {
+    bottom: -100px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid var(--main-color);
+}
+
+.carousel-indicators .active {
+    background-color: var(--main-color);
+}
+
+/*contact*/
+.contact {
+    background: linear-gradient(rgba(255,114,76,0.85),rgba(255,114,76,0.85)), url(../img/contactbg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.w-65{
+    width: 65%;
+}
+
+
+.contact input:focus, .contact textarea:focus{
+    border: 1px solid white !important;
+    box-shadow: none;
+}
+.contact input::placeholder, .contact textarea::placeholder{
+    color:white;
+}
+/*map*/
+.map h3, .map span{
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    color:rgb(243, 243, 243) ;
+
+}
+.contact-info .container{
+    background-color: #282828;
+}
+
+
+.contact-info i{
+    color: var(--main-color);
+    width: 30px;
+    height: 30px;
+    background-color: #f3f3f3;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    transition:0.9s transform, 0.9s color;
+    
+}
+.contact-info i:hover{
+    color:white;
+    background-color: var(--main-color);
+    transform: rotate(360deg);
+
+}
+/*footer*/
+footer{
+    background-color: white;
+}
+footer p{
+    font-family: 'Raleway', sans-serif;
+    color: #818181;
+    font-size: 16px;
+    font-weight: 500;
+}
